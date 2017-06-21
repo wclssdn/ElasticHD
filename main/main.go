@@ -93,7 +93,7 @@ func runCmd(prog string, args ...string) error {
 // parseFlags parse flags of program.
 func parseFlags() {
 	config = &Config{}
-	flag.StringVar(&config.ServerHost, "p", "0.0.0.0:9800", "local server address")
+	flag.StringVar(&config.ServerHost, "p", "127.0.0.1:9800", "local server address")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
 		flag.PrintDefaults()
